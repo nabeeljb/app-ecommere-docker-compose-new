@@ -1,0 +1,10 @@
+version: "3"
+services:
+  hostname:
+    build: ./db
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+  app:
+    build: ./app
+    ports:
+      - 1000:80
